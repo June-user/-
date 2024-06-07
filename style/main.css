@@ -1,0 +1,381 @@
+@font-face {
+  font-family: "Bahnschrift";
+  scr: local("Bahnschrift");
+  src: url(../fonts/Bahnschrift.ttf);
+}
+*
+{
+  margin: 0;
+  padding: 0;
+}
+html{
+  background-color: #D9D9D9;
+}
+
+body{
+  font-family: "Bahnschrift";
+  overflow-x:hidden;
+  background-image: url('../img/back.svg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.body__prod, .body__deliv, .body__map{
+  background-image: none;
+}
+a {
+  text-decoration: none;
+}
+.header{
+  display: flex;
+  justify-content: end;
+  column-gap: 50px;
+}
+.header div{
+  margin-top: 25px;
+  margin-right: 20px;
+}
+.messenger{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 350px;
+  width: 100px;
+  align-items: center;
+}
+.feedback{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 400px;
+  width: 130px;
+  align-items: center;
+}
+.feedback__icon{
+  position: relative;
+}
+.feedback__text{
+  position: absolute;
+  top: 38%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #293F62;
+  font-weight: bold;
+  font-size: 17px;
+}
+.button-52 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bolder;
+  letter-spacing: 1px; 
+  padding: 10px 50px;
+  outline: 0;
+  border: 2px solid #2C5066;
+  cursor: pointer;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+  user-select: none;
+  border-radius: 10px;
+  color: #172C51;
+}
+.button-52:after {
+  content: "";
+  background-color: #FDF9E0;
+  width: 100%;
+  z-index: 0;
+  position: absolute;
+  height: 100%;
+  top: 7px;
+  left: 7px;
+  transition: 0.2s;
+  border-radius: 10px;
+}
+.button__text{
+  outline: 0;
+  position: relative;
+  font-size: 24px;
+  font-weight: bolder;
+  letter-spacing: 1px;
+  z-index: 1;
+}
+.button-52:hover:after {
+  top: 0px;
+  left: 0px;
+}
+
+.about{
+  display: grid;
+  gap: 32px;
+  margin-left: 25px;
+  margin-right: 80px;
+}
+.about__photo{
+  grid-column: 1/2;
+  pointer-events: none;
+}
+.about__text{
+  grid-column: 2/2;
+  display: grid;
+  grid-template-rows: 140px 150px 100px;
+  font-size: 22px;
+  margin-top: 50px;
+}
+.razdel{
+  color: #335870;
+  font-size: 50px;
+  letter-spacing: 5px;
+  font-stretch: condensed;
+  font-weight: bold;
+  text-align: center; 
+}
+.workers{
+  margin-top: 150px;
+}
+.photo{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: space-evenly;
+}
+.wheat{
+  display: block;
+  position: absolute;
+  top: 1660px;
+  left: 20%;
+}
+
+
+
+.photo__w {
+  text-align: center;
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  text-decoration: none;
+  transition: background-color .3s;
+  }
+.photo__w:before {
+  display: block;
+  
+  content: "";
+  height: 300px;
+  opacity: 0;
+  position: absolute;
+  width: 300px;
+  z-index: 2;
+  top: 31px;
+  left: 38px;
+  background: linear-gradient(rgba(255,255,255,0) 0%,rgba(0,0,0) 100%);
+}
+  
+.photo__w:after {
+  color: white;
+  content: attr(alt);
+  display: block;
+  font-size: 16px;
+  opacity: 0;
+  padding: 0 3%;
+  position: absolute;
+  text-transform: none;
+  top: 75%;
+  width: 100%;
+  z-index: 3;
+}
+  
+.photo__w img {
+  border: none;
+  display: block;
+  z-index: 1;
+}
+  
+.photo__w:after {
+  transition: all 350ms ease-in-out;
+}
+  
+.photo__w:hover:before {
+  opacity: 0.6;
+}
+  
+.photo__w:hover:after {
+  opacity: 1;
+  transform: scale(1) translateY(-50%);
+}
+
+.end{
+  margin-top: 150px;
+}
+.end__name{
+  position: relative;
+  top: 230px;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+  color: #FDF9E0;
+}
+.address{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-items: center;
+  min-height: 716px;
+  z-index: 0;
+  background-image: url('../img/Group\ 23.svg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  flex-direction: column;
+  padding-top: 90px;
+}
+
+.circle{
+  position: absolute;
+  color: #FDF9E0;
+  font-size: 20px;
+  user-select: none;
+  pointer-events: none;
+  animation: animate 20.5s linear infinite;
+}
+@keyframes animate{
+  0%{
+    transform: rotate(360deg);
+  }
+  100%{
+    transform: rotate(0deg);
+  }
+}
+.circle span{
+  position: absolute;
+  top: -150px;
+  text-transform: uppercase;
+  display: inline-block;
+  transform-origin: 0 150px;
+}
+
+
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-gap: 20px;
+  background-color: #333;
+  color: #fff;
+  padding: 40px;
+}
+
+.footer__logo img {
+  width: 200px;
+  filter: invert(20%) sepia(5%);
+}
+.footer__logo{
+color: #a7a3a3;
+}
+
+.footer__links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__social-link img{
+  width: 70%;
+  filter: invert(45%) sepia(5%);
+  transition: filter .2s;
+}
+
+.footer__social-link img:hover {
+  filter: invert(0) sepia(0);
+}
+
+.footer__links a {
+  color: #a7a3a3;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: color .2s;
+}
+
+.footer__links a:hover {
+  color: white;
+}
+
+.footer__social {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.footer__social-link {
+  color: #fff;
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+
+
+
+
+
+
+.header__menu {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #a0a0a07b;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  width: 70px;
+  height: 55px;
+  border-radius: 25px;
+  text-align: center;
+}
+
+.show {
+  opacity: 1;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu > li {
+  position: relative;
+}
+
+.menu > li > a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 0;
+  font-size: 40px;
+}
+
+.submenu {
+  display: none;
+  position: relative;
+  background-color: #a0a0a07b;;
+  width: 100px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.submenu li a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 10px;
+}
+
+.menu > li:hover > .submenu {
+  display: block;
+  border-radius: 10px;
+}
+
+.menu > li:hover{
+  color: #333;
+  background-color: #333;
+  border-radius: 10px;
+}
